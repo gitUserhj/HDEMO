@@ -5,3 +5,7 @@
 	margin-right: 4%;
 	margin-bottom: 2%;
 }
+.ulXs ~ ul{
+	display: none;
+}
+

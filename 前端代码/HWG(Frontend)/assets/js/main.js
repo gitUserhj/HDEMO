@@ -158,7 +158,8 @@
      Navbar Functions
     -------------------------------------*/
     var navbar_js = function() {
-        $('.dropdown-mega-menu > a, .nav-menu > li:has( > ul) > a').append("<span class=\"indicator\"><i class=\"fa fa-angle-down\"></i></span>");
+    	/*添加背景样式*/
+       /* $('.dropdown-mega-menu > a, .nav-menu > li:has( > ul) > a').append("<span class=\"indicator\"><i class=\"fa fa-angle-down\"></i></span>");*/
         $('.nav-menu > li ul > li:has( > ul) > a').append("<span class=\"indicator\"><i class=\"fa fa-angle-right\"></i></span>");
         $(".dropdown-mega-menu, .nav-menu li:has( > ul)").on('mouseenter', function () {
             if ($(window).width() > 943) {
@@ -179,12 +180,9 @@
             }
             e.preventDefault();
         });
-        $(".nav-toggle").on('click', function (e) {
-            var toggleId = $(this).data("toggle");
-            $(toggleId).slideToggle(150);
-            e.preventDefault();
-        });
+        
     };
+    
     var navbar_resize_load = function() {
         if ($(".nav-header").css("display") == "block") {
             $(".nav-bar").addClass('nav-mobile');
