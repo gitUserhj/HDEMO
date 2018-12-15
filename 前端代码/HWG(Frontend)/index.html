@@ -31,58 +31,159 @@
 		<!-- 预加载器结束 -->
 
 		<!--包装器-->
-		<div id="pageWrapper" class="page-wrapper">
+		<div id="pageWrapper" class="page-wrapper" >
 			<!-- –––––––––––––––[ 首部 ]––––––––––––––– -->
 			<header id="mainHeader" class="main-header">
 				<!-- 窗口顶部 -->
-				<!--<div class="top-bar bg-gray">
+				<!--<div class="header-menu bg-blue" >
+	                <div class="container">
+	                    <div class="row" id="topMenu" >
+	                        <div class="container">
+							<nav class="nav-bar">
+								<div class="nav-header">
+									<span class="nav-toggle" data-toggle="#header-navbar">
+			                        <i></i>
+			                        <i></i>
+			                        <i></i>
+			                    </span>
+								</div>
+								<div id="header-navbar" class="nav-collapse" >
+									<ul class="nav-menu">
+										<li class="active">
+											<a href="index.html">首页</a>
+										</li>
+										<li class="dropdown-mega-menu">
+											<a href="deals_grid.html">课程</a>
+											<div class="mega-menu"   style="width: 39%;" >
+														<ul style="overflow: hidden; width: 100%;">
+															<li v-for="(a,index) in category"  v-if="index<6" style="width: 200px; float: left;">
+																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+															</li>
+															<li v-else style="width:200px; float: left;" >
+																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+															</li>
+														</ul>
+											</div>
+										</li>
+										<li>
+											<a href="coupons_grid.html">2019考研</a>
+										</li>
+										<li>
+											<a href="stores_01.html">学校云</a>
+										</li>
+										<li>
+											<a href="contact_us_01.html">名师专栏</a>
+										</li>
+									</ul>
+								</div>
+								<div class="nav-menu nav-menu-fixed">
+									<li>
+										<a href="#">极客战记</a>
+									</li>
+									<li>
+										<a href="#">网易云课堂</a>
+									</li>
+									<li class="dropdown-mega-menu">
+										<a href="#">更多课程频道</a>
+										<div class="mega-menu" >
+												<div>
+													<div>
+														<ul>
+															<li>
+																<a href="deals_grid.html">大学先修课</a>
+															</li>
+															<li>
+																<a href="deals_grid_sidebar.html">职业教育课</a>
+															</li>
+															<li>
+																<a href="deals_list.html">教师系列MOOC</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+										</div>
+									</li>
+								</div>
+							</nav>
+						</div>
+	                </div>
+	            </div>-->
+	            
+	         	<!--导航栏-->
+	         <div class="header-menu bg-blue topPosition" id="topMenu"  :style="topgd<2?classA:classB">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4 is-hidden-sm-down">
-                            <ul class="nav-top nav-top-left list-inline t-left">
-                                <li><a href="terms_conditions.html"><i class="fa fa-question-circle"></i>Discounts Guide</a>
-                                </li>
-                                <li><a href="faq.html"><i class="fa fa-support"></i>Customer Assistance</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-12 col-md-8">
-                            <ul class="nav-top nav-top-right list-inline t-xs-center t-md-right">
-                                <li>
-                                    <a href="#"><i class="fa fa-flag-usa"></i>English <i class="fa fa-caret-down"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-flag-usa"></i>English</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-flag-fra"></i>France</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-flag-ger"></i>Germany</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-flag-rus"></i>Russia</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-usd"></i>USD <i class="fa fa-caret-down"></i></a>
-                                    <ul>
-                                        <li><a href="#">USD - US Dollar</a>
-                                        </li>
-                                        <li><a href="#">EUR - Euro</a>
-                                        </li>
-                                        <li><a href="#">CNY - Chinese Yuan</a>
-                                        </li>
-                                        <li><a href="#">RUB - Russian Ruble</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="signin.html"><i class="fa fa-lock"></i>Sign In</a>
-                                </li>
-                                <li><a href="signup.html"><i class="fa fa-user"></i>Sign Up</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div class="row"  >
+	                        <div class="container">
+							<nav class="nav-bar">
+								<div class="nav-header">
+									<span class="nav-toggle" data-toggle="#header-navbar">
+			                        <i></i>
+			                        <i></i>
+			                        <i></i>
+			                    </span>
+								</div>
+								<div id="header-navbar" class="nav-collapse" >
+									<ul class="nav-menu">
+										<li class="active">
+											<a href="index.html">首页</a>
+										</li>
+										<li class="dropdown-mega-menu">
+											<a href="deals_grid.html">课程</a>
+											<div class="mega-menu"   style="width: 39%;" >
+														<ul style="overflow: hidden; width: 100%;">
+															<li v-for="(a,index) in category"  v-if="index<6" style="width: 200px; float: left;">
+																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+															</li>
+															<li v-else style="width:200px; float: left;" >
+																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+															</li>
+														</ul>
+											</div>
+										</li>
+										<li>
+											<a href="coupons_grid.html">2019考研</a>
+										</li>
+										<li>
+											<a href="stores_01.html">学校云</a>
+										</li>
+										<li>
+											<a href="contact_us_01.html">名师专栏</a>
+										</li>
+									</ul>
+								</div>
+								<div class="nav-menu nav-menu-fixed">
+									<li>
+										<a href="#">极客战记</a>
+									</li>
+									<li>
+										<a href="#">网易云课堂</a>
+									</li>
+									<li class="dropdown-mega-menu">
+										<a href="#">更多课程频道</a>
+										<div class="mega-menu" >
+												<div>
+													<div>
+														<ul>
+															<li>
+																<a href="deals_grid.html">大学先修课</a>
+															</li>
+															<li>
+																<a href="deals_grid_sidebar.html">职业教育课</a>
+															</li>
+															<li>
+																<a href="deals_list.html">教师系列MOOC</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+										</div>
+									</li>
+								</div>
+							</nav>
+						</div>
+	                </div>
                 </div>
-            </div>-->
+            </div>
 				<!-- 窗口顶部结束 -->
 
 				<!-- logo顶部 -->
@@ -148,8 +249,8 @@
 				</div>
 				<!-- logo顶部结束 -->
 
-				<!-- 顶部菜单 -->
-				<div class="header-menu bg-blue">
+				<!-- 搜索框下部导航 -->
+				<!--<div class="header-menu bg-blue">
 					<div class="container">
 						<nav class="nav-bar">
 							<div class="nav-header">
@@ -166,16 +267,15 @@
 									</li>
 									<li class="dropdown-mega-menu">
 										<a href="deals_grid.html">课程</a>
-										<div class="mega-menu"  id="topMenu">
-											<div class="row row-v-10">
-												<div class="col-md-3">
-													<ul>
-														<li v-for="(a,index) in category" style="width:100px;float:left" ><!--如果下标小于8 正常拼接-->
-															<a href="#" >{{a}}</a>
+										<div class="mega-menu"  id="topMenu" style="width: 39%;" >
+													<ul style="overflow: hidden; width: 100%;">
+														<li v-for="(a,index) in category"  v-if="index<6" style="width: 200px; float: left;">
+															<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+														</li>
+														<li v-else style="width:200px; float: left;" >
+															<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
 														</li>
 													</ul>
-												</div>
-											</div>
 										</div>
 									</li>
 									<li>
@@ -198,7 +298,7 @@
 								</li>
 								<li class="dropdown-mega-menu">
 									<a href="#">更多课程频道</a>
-									<div class="mega-menu">
+									<div class="mega-menu" >
 											<div>
 												<div>
 													<ul>
@@ -214,12 +314,12 @@
 													</ul>
 												</div>
 											</div>
-										</div>
+									</div>
 								</li>
 							</div>
 						</nav>
 					</div>
-				</div>
+				</div>-->
 				<!-- 顶部菜单结束 -->
 
 			</header>
@@ -258,15 +358,16 @@
 			</main>
 	</body>
 	<script src="js/axios.min.js"></script>
+	<!-- 分类菜单dom-->
 	<script>
 		let menu=new Vue({
 			 el:'#menu'
 			,data:{
-				 test:'111'
-				,category:[]
+				 category:[]
 				,cl:'ulXs'
 			}
 			,methods:{
+				//获取所有分类
 				getCategory:function(){
 					let tis = this;
 					// 为给定 ID 的 user 创建请求
@@ -284,20 +385,28 @@
 		
 		
 	</script>
-	
+	<!--顶部导航 虚拟dom-->
 	<script>
 		let topMenu=new Vue({
 			 el:'#topMenu'
 			,data:{
 				category:[]
+				,classA:'display: none;'
+				,classB:'display: block'
+				,topgd:1
+				
 			}
 			,methods:{
+				//监听滚动条
+				handleScroll:function() {
+				  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+				  this.topgd=scrollTop
+				},
+				//获取所有分类
 				getCategory:function(){
 					let tis = this;
-					// 为给定 ID 的 user 创建请求
 					axios.get('http://localhost:8010/category').then(function (response) {
 						tis.category=response.data
-						console.log(response.data)
 					}).catch(function (error) {
  						console.log(error);
 					});	
@@ -305,6 +414,7 @@
 			}
 			,mounted(){
 				this.getCategory();
+				window.addEventListener('scroll', this.handleScroll)//添加滚动条监听事件
 			}
 		})
 	</script>
