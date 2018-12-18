@@ -14,3 +14,27 @@ top: 0px;
 width: 100%;
 z-index: 10;
 }
+
+.a_img img{
+	cursor: pointer;
+	transition: all 0.6s;
+
+}
+.a_img img:hover{
+	transform: scale(1.1);
+}
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+}
+  
+.el-carousel__item:nth-child(2n) {
+    background-color: #E9EBEE;
+}
+  
+.el-carousel__item:nth-child(2n+1) {
+    background-color: #E9EBEE;
+}

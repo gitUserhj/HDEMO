@@ -4,13 +4,16 @@
 		<meta charset="utf-8" />
 		<title>河南工业大学IT教育</title>
 	</head>
+		<!--自定义css文件-->
+		<link rel="stylesheet" href="css/hj_css.css" type="text/css" />
+		<link rel="stylesheet" href="css/element-ui.css" />
 		<!--模板首页工共js、css文件引用-->
 		<script src="js/commonCss.js"></script>
 		<script src="js/commonJs.js"></script>
 		
 		<script src="js/vue.min.js"></script>
-		<!--自定义css文件-->
-		<link rel="stylesheet" href="css/hj_css.css" type="text/css" />
+		<script src="js/axios.min.js"></script>
+		<script src="js/element-ui.js"></script>
 	
 	<body id="body" class="wide-layout preloader-active">
 		<noscript>
@@ -124,8 +127,12 @@
 								</div>
 								<div id="header-navbar" class="nav-collapse" >
 									<ul class="nav-menu">
-										<li class="active">
-											<a href="index.html">首页</a>
+										<li>
+											<span>
+												<a href="index.html" class="logo" style="margin-left: -10px;">
+													<img src="http://localhost:8010/MSLOGO1.PNG" alt="" width="120px" style="height: 60px" >
+												</a>
+											</span>						
 										</li>
 										<li class="dropdown-mega-menu">
 											<a href="deals_grid.html">课程</a>
@@ -193,7 +200,7 @@
 							<!--logo-->
 							<div class="brand col-md-3 t-xs-center t-md-left valign-middle">
 								<a href="#" class="logo">
-									<img src="assets/images/logo.png" alt="" width="250">
+									<img src="http://localhost:8010/MSLOGO.PNG" alt="" width="250" style="height: 60px;" >
 								</a>
 							</div>
 							<!--logo结束-->
@@ -225,7 +232,8 @@
 										</form>
 									</div>
 									<!--搜索框结束-->
-
+									
+									<!--搜索框右侧区域-->
 									<!--<div class="col-sm-4 t-xs-center t-md-right">
 										<div class="header-cart">
 											<a href="cart.html">
@@ -352,12 +360,81 @@
 									</aside>
 								</div>
 							</div>
+							<!--轮播推荐课程-->
+							<section class="section latest-coupons-area ptb-30" >
+								<header class="panel ptb-15 prl-20 pos-r mb-30">
+									<h3 class="section-title font-18">Latest Deals</h3>
+									<a class="btn btn-o btn-xs pos-a right-10 pos-tb-center">View All</a>
+								</header>
+								
+								<el-carousel indicator-position="outside" id="kctj" style=" height: 350px;" >
+								    <el-carousel-item style=" height: 350px;"  >
+											<div  v-for="(a,index) in dt" v-if="index<4"  style=" float: left; width: 24%; margin-right: 11px; padding-left: 11px;" >
+												<a>
+													<div class="coupon-single panel t-center a_img"  >
+														<div class="ribbon-wrapper is-hidden-xs-down" >
+															<div class="ribbon">新课</div>
+														</div>
+														<div class="row">
+															<div class="col-xs-12">
+																<div class="text-center p-20">
+																	<img class="store-logo" src="assets/images/coupons/coupon_01.jpg" alt="">
+																</div>
+															</div>
+															<div class="col-xs-12">
+																<div class="panel-body">
+																	<h4>{{a.courseName}}</h4>
+																	<ul class="deal-meta list-inline mb-10">
+																		<li class="color-green"><i class="ico lnr lnr-smile mr-5"></i>进行至一周</li>
+																		<li class="color-muted"><i class="ico lnr lnr-users mr-5"></i>666</li>
+																	</ul>
+																	<div class="color-muted" style="text-align: left;">
+								             							讲述ms传奇的人生经历 助你走上人生巅峰早日能与太阳肩并肩
+								            						 </div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+								    </el-carousel-item>
+								    <el-carousel-item style=" height: 350px;"> 
+											<div v-for="(a,index) in dt" v-if="index>3" style="float: left; width: 24%; margin-right: 11px; padding-left: 11px;" >
+												<a>
+													<div class="coupon-single panel t-center a_img"  >
+														<div class="ribbon-wrapper is-hidden-xs-down" >
+															<div class="ribbon">新课</div>
+														</div>
+														<div class="row">
+															<div class="col-xs-12">
+																<div class="text-center p-20">
+																	<img class="store-logo" src="assets/images/coupons/coupon_01.jpg" alt="">
+																</div>
+															</div>
+															<div class="col-xs-12">
+																<div class="panel-body">
+																	<h4>{{a.courseName}}</h4>
+																	<ul class="deal-meta list-inline mb-10">
+																		<li class="color-green"><i class="ico lnr lnr-smile mr-5"></i>进行至一周</li>
+																		<li class="color-muted"><i class="ico lnr lnr-users mr-5"></i>666</li>
+																	</ul>
+																	<div class="color-muted" style="text-align: left;">
+								             							讲述ms传奇的人生经历 助你走上人生巅峰早日能与太阳肩并肩
+								            						 </div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+								    </el-carousel-item>
+								</el-carousel>
+							</section>
 						</div>
 					</div>
 				</div>
 			</main>
 	</body>
-	<script src="js/axios.min.js"></script>
 	<!-- 分类菜单dom-->
 	<script>
 		let menu=new Vue({
@@ -416,6 +493,20 @@
 				this.getCategory();
 				window.addEventListener('scroll', this.handleScroll)//添加滚动条监听事件
 			}
+		})
+	</script>
+	
+	<script>
+		let kctj=new Vue({
+				 el:'#kctj'
+				,data:{
+					 dt:[]
+				},mounted(){
+					let tis=this;
+					axios.get('http://localhost:8010/course').then(function (response) {
+						tis.dt=response.data;
+					});
+				}
 		})
 	</script>
 
