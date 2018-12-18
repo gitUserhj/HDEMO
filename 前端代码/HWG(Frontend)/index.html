@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="no-js"><!--no-js 检测当前浏览器是否支持css3、h5 并且使浏览器支持h5新标签。。-->
+<html lang="en" dir="ltr" class="no-js">
+	<!--no-js 检测当前浏览器是否支持css3、h5 并且使浏览器支持h5新标签。。-->
+
 	<head>
 		<meta charset="utf-8" />
 		<title>河南工业大学IT教育</title>
 	</head>
-		<!--自定义css文件-->
-		<link rel="stylesheet" href="css/hj_css.css" type="text/css" />
-		<link rel="stylesheet" href="css/element-ui.css" />
-		<!--模板首页工共js、css文件引用-->
-		<script src="js/commonCss.js"></script>
-		<script src="js/commonJs.js"></script>
-		
-		<script src="js/vue.min.js"></script>
-		<script src="js/axios.min.js"></script>
-		<script src="js/element-ui.js"></script>
-	
+	<!--自定义css文件-->
+	<link rel="stylesheet" href="css/hj_css.css" type="text/css" />
+	<link rel="stylesheet" href="css/element-ui.css" />
+	<!--模板首页工共js、css文件引用-->
+	<script src="js/commonCss.js"></script>
+	<script src="js/commonJs.js"></script>
+
+	<script src="js/vue.min.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/element-ui.js"></script>
+
 	<body id="body" class="wide-layout preloader-active">
 		<noscript>
         <div class="noscript alert-error">
@@ -34,7 +36,7 @@
 		<!-- 预加载器结束 -->
 
 		<!--包装器-->
-		<div id="pageWrapper" class="page-wrapper" >
+		<div id="pageWrapper" class="page-wrapper">
 			<!-- –––––––––––––––[ 首部 ]––––––––––––––– -->
 			<header id="mainHeader" class="main-header">
 				<!-- 窗口顶部 -->
@@ -111,63 +113,63 @@
 						</div>
 	                </div>
 	            </div>-->
-	            
-	         	<!--导航栏-->
-	         <div class="header-menu bg-blue topPosition" id="topMenu"  :style="topgd<2?classA:classB">
-                <div class="container">
-                    <div class="row"  >
-	                        <div class="container">
-							<nav class="nav-bar">
-								<div class="nav-header">
-									<span class="nav-toggle" data-toggle="#header-navbar">
-			                        <i></i>
-			                        <i></i>
-			                        <i></i>
-			                    </span>
-								</div>
-								<div id="header-navbar" class="nav-collapse" >
-									<ul class="nav-menu">
-										<li>
-											<span>
+
+				<!--导航栏-->
+				<div class="header-menu bg-blue topPosition" id="topMenu" :style="topgd<2?classA:classB">
+					<div class="container">
+						<div class="row">
+							<div class="container">
+								<nav class="nav-bar">
+									<div class="nav-header">
+										<span class="nav-toggle" data-toggle="#header-navbar">
+			                        		<i></i>
+			                        		<i></i>
+			                        		<i></i>
+			                    		</span>
+									</div>
+									<div id="header-navbar" class="nav-collapse">
+										<ul class="nav-menu">
+											<li>
+												<span>
 												<a href="index.html" class="logo" style="margin-left: -10px;">
 													<img src="http://localhost:8010/MSLOGO1.PNG" alt="" width="120px" style="height: 60px" >
 												</a>
-											</span>						
+											</span>
+											</li>
+											<li class="dropdown-mega-menu">
+												<a href="deals_grid.html">课程</a>
+												<div class="mega-menu" style="width: 39%;">
+													<ul style="overflow: hidden; width: 100%;">
+														<li v-for="(a,index) in category" v-if="index<6" style="width: 200px; float: left;">
+															<a href="#"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+														</li>
+														<li v-else style="width:200px; float: left;">
+															<a href="#"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="coupons_grid.html">2019考研</a>
+											</li>
+											<li>
+												<a href="stores_01.html">学校云</a>
+											</li>
+											<li>
+												<a href="contact_us_01.html">名师专栏</a>
+											</li>
+										</ul>
+									</div>
+									<div class="nav-menu nav-menu-fixed">
+										<li>
+											<a href="#">极客战记</a>
+										</li>
+										<li>
+											<a href="#">网易云课堂</a>
 										</li>
 										<li class="dropdown-mega-menu">
-											<a href="deals_grid.html">课程</a>
-											<div class="mega-menu"   style="width: 39%;" >
-														<ul style="overflow: hidden; width: 100%;">
-															<li v-for="(a,index) in category"  v-if="index<6" style="width: 200px; float: left;">
-																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
-															</li>
-															<li v-else style="width:200px; float: left;" >
-																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
-															</li>
-														</ul>
-											</div>
-										</li>
-										<li>
-											<a href="coupons_grid.html">2019考研</a>
-										</li>
-										<li>
-											<a href="stores_01.html">学校云</a>
-										</li>
-										<li>
-											<a href="contact_us_01.html">名师专栏</a>
-										</li>
-									</ul>
-								</div>
-								<div class="nav-menu nav-menu-fixed">
-									<li>
-										<a href="#">极客战记</a>
-									</li>
-									<li>
-										<a href="#">网易云课堂</a>
-									</li>
-									<li class="dropdown-mega-menu">
-										<a href="#">更多课程频道</a>
-										<div class="mega-menu" >
+											<a href="#">更多课程频道</a>
+											<div class="mega-menu">
 												<div>
 													<div>
 														<ul>
@@ -183,14 +185,14 @@
 														</ul>
 													</div>
 												</div>
-										</div>
-									</li>
-								</div>
-							</nav>
+											</div>
+										</li>
+									</div>
+								</nav>
+							</div>
 						</div>
-	                </div>
-                </div>
-            </div>
+					</div>
+				</div>
 				<!-- 窗口顶部结束 -->
 
 				<!-- logo顶部 -->
@@ -200,7 +202,7 @@
 							<!--logo-->
 							<div class="brand col-md-3 t-xs-center t-md-left valign-middle">
 								<a href="#" class="logo">
-									<img src="http://localhost:8010/MSLOGO.PNG" alt="" width="250" style="height: 60px;" >
+									<img src="http://localhost:8010/MSLOGO.PNG" alt="" width="250" style="height: 60px;">
 								</a>
 							</div>
 							<!--logo结束-->
@@ -232,7 +234,7 @@
 										</form>
 									</div>
 									<!--搜索框结束-->
-									
+
 									<!--搜索框右侧区域-->
 									<!--<div class="col-sm-4 t-xs-center t-md-right">
 										<div class="header-cart">
@@ -342,92 +344,109 @@
 								<!--侧菜单-->
 								<div class="col-xs-12 col-md-4 col-lg-3" id="menu">
 									<aside>
-										<ul class="nav-coupon-category panel"  v-for="(a,index) in category"><!--循环所有数据-->
-											
-											<li v-if="index<8"><!--如果下标小于8 正常拼接-->
+										<ul class="nav-coupon-category panel" v-for="(a,index) in category">
+											<!--循环所有数据-->
+
+											<li v-if="index<8">
+												<!--如果下标小于8 正常拼接-->
 												<a href="#"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" /><i class="fa"></i>{{a}}</a>
 											</li>
-											<li v-else-if="index==8" ><!--如果下表等于8 添加更多选项按钮-->
-												<a  @mouseover="cl=''" @mouseout="cl='ulXs'" :class="cl"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" /><i  class="fa"></i>更多</a>
-													<ul v-for="(a,index) in category" @mouseover="cl=''"   @mouseout="cl='ulXs'"><!--再次循环数据-->
-														<li v-if="index>=8"><!--拼接出下标为8以后的数据（包含下标8）-->
-															<a href="deals_grid.html"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" /><i class="fa"></i>{{a}}</a>
-														</li>
-													</ul>
-											
+											<li v-else-if="index==8">
+												<!--如果下表等于8 添加更多选项按钮-->
+												<a @mouseover="cl=''" @mouseout="cl='ulXs'" :class="cl"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" /><i class="fa"></i>更多</a>
+												<ul v-for="(a,index) in category" @mouseover="cl=''" @mouseout="cl='ulXs'">
+													<!--再次循环数据-->
+													<li v-if="index>=8">
+														<!--拼接出下标为8以后的数据（包含下标8）-->
+														<a href="deals_grid.html"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" /><i class="fa"></i>{{a}}</a>
+													</li>
+												</ul>
+
 											</li>
 										</ul>
 									</aside>
 								</div>
+
+								<!--图片轮播-->
+								<div class="col-xs-12 col-md-8 col-lg-9">
+									<div id="slider" class="block">
+										<el-carousel height="450px">
+											<el-carousel-item v-for="(img,index) in imgs">
+												<img :src="img.url" :alt="img.index" width="100%">
+											</el-carousel-item>
+										</el-carousel>
+									</div>
+								</div>
+								<!--图片轮播结束-->
 							</div>
 							<!--轮播推荐课程-->
-							<section class="section latest-coupons-area ptb-30" >
+							<section class="section latest-coupons-area ptb-30">
 								<header class="panel ptb-15 prl-20 pos-r mb-30">
 									<h3 class="section-title font-18">Latest Deals</h3>
 									<a class="btn btn-o btn-xs pos-a right-10 pos-tb-center">View All</a>
 								</header>
-								
-								<el-carousel indicator-position="outside" id="kctj" style=" height: 350px;" >
-								    <el-carousel-item style=" height: 350px;"  >
-											<div  v-for="(a,index) in dt" v-if="index<4"  style=" float: left; width: 24%; margin-right: 11px; padding-left: 11px;" >
-												<a>
-													<div class="coupon-single panel t-center a_img"  >
-														<div class="ribbon-wrapper is-hidden-xs-down" >
-															<div class="ribbon">新课</div>
-														</div>
-														<div class="row">
-															<div class="col-xs-12">
-																<div class="text-center p-20">
-																	<img class="store-logo" src="assets/images/coupons/coupon_01.jpg" alt="">
-																</div>
+
+								<el-carousel indicator-position="outside" id="kctj" style=" height: 350px;">
+									<el-carousel-item style=" height: 350px;">
+										<div v-for="(a,index) in dt" v-if="index<4" style=" float: left; width: 24%; margin-right: 11px; padding-left: 11px;">
+											<a>
+												<div class="coupon-single panel t-center a_img">
+													<div class="ribbon-wrapper is-hidden-xs-down">
+														<div class="ribbon">新课</div>
+													</div>
+													<div class="row">
+														<div class="col-xs-12">
+															<div class="text-center p-20">
+																<img class="store-logo" src="assets/images/coupons/coupon_01.jpg" alt="">
 															</div>
-															<div class="col-xs-12">
-																<div class="panel-body">
-																	<h4>{{a.courseName}}</h4>
-																	<ul class="deal-meta list-inline mb-10">
-																		<li class="color-green"><i class="ico lnr lnr-smile mr-5"></i>进行至一周</li>
-																		<li class="color-muted"><i class="ico lnr lnr-users mr-5"></i>666</li>
-																	</ul>
-																	<div class="color-muted" style="text-align: left;">
-								             							讲述ms传奇的人生经历 助你走上人生巅峰早日能与太阳肩并肩
-								            						 </div>
+														</div>
+														<div class="col-xs-12">
+															<div class="panel-body">
+																<h4>{{a.courseName}}</h4>
+																<ul class="deal-meta list-inline mb-10">
+																	<li class="color-green"><i class="ico lnr lnr-smile mr-5"></i>进行至一周</li>
+																	<li class="color-muted"><i class="ico lnr lnr-users mr-5"></i>666</li>
+																</ul>
+																<div class="color-muted" style="text-align: left;">
+																	讲述ms传奇的人生经历 助你走上人生巅峰早日能与太阳肩并肩
 																</div>
 															</div>
 														</div>
 													</div>
-												</a>
-											</div>
-								    </el-carousel-item>
-								    <el-carousel-item style=" height: 350px;"> 
-											<div v-for="(a,index) in dt" v-if="index>3" style="float: left; width: 24%; margin-right: 11px; padding-left: 11px;" >
-												<a>
-													<div class="coupon-single panel t-center a_img"  >
-														<div class="ribbon-wrapper is-hidden-xs-down" >
-															<div class="ribbon">新课</div>
-														</div>
-														<div class="row">
-															<div class="col-xs-12">
-																<div class="text-center p-20">
-																	<img class="store-logo" src="assets/images/coupons/coupon_01.jpg" alt="">
-																</div>
+												</div>
+											</a>
+										</div>
+									</el-carousel-item>
+									<el-carousel-item style=" height: 350px;">
+										<div v-for="(a,index) in dt" v-if="index>3" style="float: left; width: 24%; margin-right: 11px; padding-left: 11px;">
+											<a>
+												<div class="coupon-single panel t-center a_img">
+													<div class="ribbon-wrapper is-hidden-xs-down">
+														<div class="ribbon">新课</div>
+													</div>
+													<div class="row">
+														<div class="col-xs-12">
+															<div class="text-center p-20">
+																<img class="store-logo" src="assets/images/coupons/coupon_01.jpg" alt="">
 															</div>
-															<div class="col-xs-12">
-																<div class="panel-body">
-																	<h4>{{a.courseName}}</h4>
-																	<ul class="deal-meta list-inline mb-10">
-																		<li class="color-green"><i class="ico lnr lnr-smile mr-5"></i>进行至一周</li>
-																		<li class="color-muted"><i class="ico lnr lnr-users mr-5"></i>666</li>
-																	</ul>
-																	<div class="color-muted" style="text-align: left;">
-								             							讲述ms传奇的人生经历 助你走上人生巅峰早日能与太阳肩并肩
-								            						 </div>
+														</div>
+														<div class="col-xs-12">
+															<div class="panel-body">
+																<h4>{{a.courseName}}</h4>
+																<ul class="deal-meta list-inline mb-10">
+																	<li class="color-green"><i class="ico lnr lnr-smile mr-5"></i>进行至一周</li>
+																	<li class="color-muted"><i class="ico lnr lnr-users mr-5"></i>666</li>
+																</ul>
+																<div class="color-muted" style="text-align: left;">
+																	讲述ms传奇的人生经历 助你走上人生巅峰早日能与太阳肩并肩
 																</div>
 															</div>
 														</div>
 													</div>
-												</a>
-											</div>
-								    </el-carousel-item>
+												</div>
+											</a>
+										</div>
+									</el-carousel-item>
 								</el-carousel>
 							</section>
 						</div>
@@ -437,77 +456,111 @@
 	</body>
 	<!-- 分类菜单dom-->
 	<script>
-		let menu=new Vue({
-			 el:'#menu'
-			,data:{
-				 category:[]
-				,cl:'ulXs'
-			}
-			,methods:{
+		let menu = new Vue({
+			el: '#menu',
+			data: {
+				category: [],
+				cl: 'ulXs'
+			},
+			methods: {
 				//获取所有分类
-				getCategory:function(){
+				getCategory: function() {
 					let tis = this;
 					// 为给定 ID 的 user 创建请求
-					axios.get('http://localhost:8010/category').then(function (response) {
-						tis.category=response.data
-					}).catch(function (error) {
- 						console.log(error);
-					});	
+					axios.get('http://localhost:8010/category').then(function(response) {
+						tis.category = response.data
+					}).catch(function(error) {
+						console.log(error);
+					});
 				}
-			}
-			,mounted(){
+			},
+			mounted() {
 				this.getCategory();
 			}
 		})
-		
-		
 	</script>
 	<!--顶部导航 虚拟dom-->
 	<script>
-		let topMenu=new Vue({
-			 el:'#topMenu'
-			,data:{
-				category:[]
-				,classA:'display: none;'
-				,classB:'display: block'
-				,topgd:1
-				
-			}
-			,methods:{
+		let topMenu = new Vue({
+			el: '#topMenu',
+			data: {
+				category: [],
+				classA: 'display: none;',
+				classB: 'display: block',
+				topgd: 1
+
+			},
+			methods: {
 				//监听滚动条
-				handleScroll:function() {
-				  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-				  this.topgd=scrollTop
+				handleScroll: function() {
+					var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+					this.topgd = scrollTop
 				},
 				//获取所有分类
-				getCategory:function(){
+				getCategory: function() {
 					let tis = this;
-					axios.get('http://localhost:8010/category').then(function (response) {
-						tis.category=response.data
-					}).catch(function (error) {
- 						console.log(error);
-					});	
-				}
-			}
-			,mounted(){
-				this.getCategory();
-				window.addEventListener('scroll', this.handleScroll)//添加滚动条监听事件
-			}
-		})
-	</script>
-	
-	<script>
-		let kctj=new Vue({
-				 el:'#kctj'
-				,data:{
-					 dt:[]
-				},mounted(){
-					let tis=this;
-					axios.get('http://localhost:8010/course').then(function (response) {
-						tis.dt=response.data;
+					axios.get('http://localhost:8010/category').then(function(response) {
+						tis.category = response.data
+					}).catch(function(error) {
+						console.log(error);
 					});
 				}
+			},
+			mounted() {
+				this.getCategory();
+				window.addEventListener('scroll', this.handleScroll) //添加滚动条监听事件
+			}
 		})
 	</script>
+
+	<script>
+		let kctj = new Vue({
+			el: '#kctj',
+			data: {
+				dt: []
+			},
+			mounted() {
+				let tis = this;
+				axios.get('http://localhost:8010/course').then(function(response) {
+					tis.dt = response.data;
+				});
+			}
+		})
+	</script>
+	<!--图片轮播-->
+	<script>
+		var carousel = new Vue({
+			el: '#slider',
+			data: {
+				imgs: []
+			},
+			methods: {
+				getCarousel: function() {
+					let tis = this;
+					// 为给定 ID 的 user 创建请求
+					axios.get('http://localhost:8010/carousel').then(function(response) {
+						tis.imgs = response.data
+						console.log(response.data)
+					}).catch(function(error) {
+						console.log(error);
+					});
+				}
+			},
+			mounted() {
+				this.getCarousel();
+			}
+		})
+	</script>
+
+	<!--图片轮播-->
+	<style>
+		.el-carousel__item:nth-child(2n) {
+			background-color: #99a9bf;
+		}
+		
+		.el-carousel__item:nth-child(2n+1) {
+			background-color: #d3dce6;
+		}
+	</style>
 
 </html>
