@@ -39,83 +39,8 @@
 		<div id="pageWrapper" class="page-wrapper">
 			<!-- –––––––––––––––[ 首部 ]––––––––––––––– -->
 			<header id="mainHeader" class="main-header">
-				<!-- 窗口顶部 -->
-				<!--<div class="header-menu bg-blue" >
-	                <div class="container">
-	                    <div class="row" id="topMenu" >
-	                        <div class="container">
-							<nav class="nav-bar">
-								<div class="nav-header">
-									<span class="nav-toggle" data-toggle="#header-navbar">
-			                        <i></i>
-			                        <i></i>
-			                        <i></i>
-			                    </span>
-								</div>
-								<div id="header-navbar" class="nav-collapse" >
-									<ul class="nav-menu">
-										<li class="active">
-											<a href="index.html">首页</a>
-										</li>
-										<li class="dropdown-mega-menu">
-											<a href="deals_grid.html">课程</a>
-											<div class="mega-menu"   style="width: 39%;" >
-														<ul style="overflow: hidden; width: 100%;">
-															<li v-for="(a,index) in category"  v-if="index<6" style="width: 200px; float: left;">
-																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
-															</li>
-															<li v-else style="width:200px; float: left;" >
-																<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
-															</li>
-														</ul>
-											</div>
-										</li>
-										<li>
-											<a href="coupons_grid.html">2019考研</a>
-										</li>
-										<li>
-											<a href="stores_01.html">学校云</a>
-										</li>
-										<li>
-											<a href="contact_us_01.html">名师专栏</a>
-										</li>
-									</ul>
-								</div>
-								<div class="nav-menu nav-menu-fixed">
-									<li>
-										<a href="#">极客战记</a>
-									</li>
-									<li>
-										<a href="#">网易云课堂</a>
-									</li>
-									<li class="dropdown-mega-menu">
-										<a href="#">更多课程频道</a>
-										<div class="mega-menu" >
-												<div>
-													<div>
-														<ul>
-															<li>
-																<a href="deals_grid.html">大学先修课</a>
-															</li>
-															<li>
-																<a href="deals_grid_sidebar.html">职业教育课</a>
-															</li>
-															<li>
-																<a href="deals_list.html">教师系列MOOC</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-										</div>
-									</li>
-								</div>
-							</nav>
-						</div>
-	                </div>
-	            </div>-->
-
 				<!--导航栏-->
-				<div class="header-menu bg-blue topPosition" id="topMenu" :style="topgd<2?classA:classB">
+				<div class="header-menu bg-blue topPosition" id="topMenu" style="line-height:0"  :style="topgd<2?classA:classB">
 					<div class="container">
 						<div class="row">
 							<div class="container">
@@ -128,16 +53,16 @@
 			                    		</span>
 									</div>
 									<div id="header-navbar" class="nav-collapse">
-										<ul class="nav-menu">
+										<ul class="nav-menu" >
 											<li>
 												<span>
 												<a href="index.html" class="logo" style="margin-left: -10px;">
-													<img src="http://localhost:8010/MSLOGO1.PNG" alt="" width="120px" style="height: 60px" >
+													<img src="http://localhost:8010/MSLOGO1.PNG" alt="" width="120px" style="height: 50px" >
 												</a>
 											</span>
 											</li>
 											<li class="dropdown-mega-menu">
-												<a href="deals_grid.html">课程</a>
+												<a >课程</a>
 												<div class="mega-menu" style="width: 39%;">
 													<ul style="overflow: hidden; width: 100%;">
 														<li v-for="(a,index) in category" v-if="index<6" style="width: 200px; float: left;">
@@ -158,15 +83,16 @@
 											<li>
 												<a href="contact_us_01.html">名师专栏</a>
 											</li>
+											<li style=" margin-left: 150px;">
+												<input type="text"   class="form-control input-lg search-input" placeholder="搜索感兴趣的课程" required="required" style=" border: none; margin-top: 8.5px; background-color: white; height: 39px;"/>
+											</li>
+											<li >
+												<el-button type="success" style=" margin-top: 8px;" icon="el-icon-search"></el-button>
+											</li>
 										</ul>
 									</div>
 									<div class="nav-menu nav-menu-fixed">
-										<li>
-											<a href="#">极客战记</a>
-										</li>
-										<li>
-											<a href="#">网易云课堂</a>
-										</li>
+										
 										<li class="dropdown-mega-menu">
 											<a href="#">更多课程频道</a>
 											<div class="mega-menu">
@@ -223,10 +149,9 @@
                                                         <option>Discounts</option>
                                                     </select>-->
 														<div class="input-group-btn">
-															<button type="submit" class="btn btn-lg btn-search btn-block">
+															<button type="submit" class="btn btn-lg btn-search btn-block" icon="el-icon-search">
 																搜索
-                                                            <i class="fa fa-search font-16"></i>
-                                                        </button>
+                                                      	  	</button>
 														</div>
 													</div>
 												</div>
@@ -260,7 +185,7 @@
 				<!-- logo顶部结束 -->
 
 				<!-- 搜索框下部导航 -->
-				<!--<div class="header-menu bg-blue">
+				<!--<div class="header-menu bg-blue topMenu" :style="topgd<2?classB:classA">
 					<div class="container">
 						<nav class="nav-bar">
 							<div class="nav-header">
@@ -276,16 +201,16 @@
 										<a href="index.html">首页</a>
 									</li>
 									<li class="dropdown-mega-menu">
-										<a href="deals_grid.html">课程</a>
-										<div class="mega-menu"  id="topMenu" style="width: 39%;" >
-													<ul style="overflow: hidden; width: 100%;">
-														<li v-for="(a,index) in category"  v-if="index<6" style="width: 200px; float: left;">
-															<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
-														</li>
-														<li v-else style="width:200px; float: left;" >
-															<a href="#" ><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
-														</li>
-													</ul>
+										<a >课程</a>
+										<div class="mega-menu" style="width: 39%;">
+											<ul style="overflow: hidden; width: 100%;">
+												<li v-for="(a,index) in category" v-if="index<6" style="width: 200px; float: left;">
+													<a href="#"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+												</li>
+												<li v-else style="width:200px; float: left;">
+													<a href="#"><img src="assets/images/favicon/apple-touch-icon.png" class="manuImg" />{{a}}</a>
+												</li>
+											</ul>
 										</div>
 									</li>
 									<li>
@@ -370,7 +295,7 @@
 								<!--图片轮播-->
 								<div class="col-xs-12 col-md-8 col-lg-9">
 									<div id="slider" class="block">
-										<el-carousel height="450px">
+										<el-carousel height="450px" >
 											<el-carousel-item v-for="(img,index) in imgs">
 												<img :src="img.url" :alt="img.index" width="100%">
 											</el-carousel-item>
@@ -382,12 +307,11 @@
 							<!--轮播推荐课程-->
 							<section class="section latest-coupons-area ptb-30">
 								<header class="panel ptb-15 prl-20 pos-r mb-30">
-									<h3 class="section-title font-18">Latest Deals</h3>
+									<h3 class="section-title font-18">推荐课程</h3>
 									<a class="btn btn-o btn-xs pos-a right-10 pos-tb-center">View All</a>
 								</header>
-
-								<el-carousel indicator-position="outside" id="kctj" style=" height: 350px;">
-									<el-carousel-item style=" height: 350px;">
+								<el-carousel indicator-position="outside" id="kctj" style=" height: 350px;" >
+									<el-carousel-item style=" height: 350px; background-color: #E9EBEE;">
 										<div v-for="(a,index) in dt" v-if="index<4" style=" float: left; width: 24%; margin-right: 11px; padding-left: 11px;">
 											<a>
 												<div class="coupon-single panel t-center a_img">
@@ -417,7 +341,7 @@
 											</a>
 										</div>
 									</el-carousel-item>
-									<el-carousel-item style=" height: 350px;">
+									<el-carousel-item style=" height: 350px;  background-color: #E9EBEE;">
 										<div v-for="(a,index) in dt" v-if="index>3" style="float: left; width: 24%; margin-right: 11px; padding-left: 11px;">
 											<a>
 												<div class="coupon-single panel t-center a_img">
@@ -453,6 +377,43 @@
 					</div>
 				</div>
 			</main>
+			<main id="mainContent" class="main-content" style="background-color: #617FA5; ">
+				<div class="container" >
+					<span style="  color:  white; float: left;">
+						
+						<span  style="font-size:70px; font-style: oblique;">
+							精彩讨论
+						</span>
+						<br />
+						<span style="font-size: 20px;">
+								一起讨论、一起学习
+						</span>
+						<br />
+						<span >
+								人在线讨论
+						</span>	
+					</span>
+					
+					<!--精彩讨论轮播-->
+					<div id="jctl" style="width: 70%; float: right; margin-top: 10px; margin-right: 60px;">
+						
+						<el-carousel  style="width: 110%; margin-right: 60px;" >
+						    <el-carousel-item v-for="(item,index) in i1" style="background-color: #617FA5; ">
+<!--						      <div v-for="(d,index2) in dt" v-if="(index2+1)>=(index+1)*2-1 && (index2+1)<=(index+1)*2" >{{ d.courseName }}</div>
+-->						   
+						    <div class="panel" v-for="(d,index2) in dt" v-if="(index2+1)>=(index+1)*2-1 && (index2+1)<=(index+1)*2" style=" width: 40%; height: 80%; margin-left:60px; float: left;">
+										<div class="panel-body" >
+											<div class="color-muted" style="text-align: left;">
+												{{ d }}
+											</div>
+										</div>
+							</div>
+						    </el-carousel-item>
+						</el-carousel>
+					</div>
+				</di
+			</main>
+	
 	</body>
 	<!-- 分类菜单dom-->
 	<script>
@@ -512,7 +473,7 @@
 			}
 		})
 	</script>
-
+	<!--课程推荐-->
 	<script>
 		let kctj = new Vue({
 			el: '#kctj',
@@ -529,7 +490,7 @@
 	</script>
 	<!--图片轮播-->
 	<script>
-		var carousel = new Vue({
+		let carousel = new Vue({
 			el: '#slider',
 			data: {
 				imgs: []
@@ -551,16 +512,24 @@
 			}
 		})
 	</script>
-
-	<!--图片轮播-->
-	<style>
-		.el-carousel__item:nth-child(2n) {
-			background-color: #99a9bf;
-		}
+	
+	<!--精彩讨论-->
+	<script>
+		let jctl = new Vue({
+			 el: '#jctl'
+			,data:{
+				 i1:0
+				,dt:[]
+			},
+			mounted() {
+				let tis = this;
+				axios.get('http://localhost:8010/getJctl').then(function(response) {
+					tis.i1=Math.ceil(response.data.length/2)
+					tis.dt=response.data
+				});
+			}
+		})
 		
-		.el-carousel__item:nth-child(2n+1) {
-			background-color: #d3dce6;
-		}
-	</style>
+	</script>
 
 </html>
